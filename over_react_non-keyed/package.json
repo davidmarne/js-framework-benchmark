@@ -1,0 +1,13 @@
+{
+  "name": "js-framework-benchmark-wui_builder",
+  "version": "1.0.0",
+  "description": "wui_builder demo",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "pub get && pub build"
+  },
+  "keywords": [
+    "wui_builder",
+    "dart"
+  ]
+}

@@ -1,0 +1,16 @@
+name: angular_dart_keyed
+version: 0.0.0
+author: David Marne <davemarne@gmail.com>
+
+dependencies:
+  angular: ^4.0.0
+dev_dependencies:
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+transformers:
+- angular:
+    entry_points:
+    - web/main.dart
+- dart_to_js_script_rewriter
+environment:
+  sdk: ">=1.23.0 <2.0.0"

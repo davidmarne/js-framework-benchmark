@@ -1,0 +1,13 @@
+name: over_react_non_keyed
+version: 0.0.0
+author: David Marne <davemarne@gmail.com>
+
+dependencies:
+  over_react: "^1.17.0"
+
+transformers:
+  - over_react
+  - $dart2js
+
+environment:
+  sdk: ">=1.23.0 <2.0.0"

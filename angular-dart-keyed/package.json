@@ -1,0 +1,13 @@
+{
+  "name": "js-framework-benchmark-angular-dart",
+  "version": "1.0.0",
+  "description": "angular-dart demo",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "pub get && pub build"
+  },
+  "keywords": [
+    "angular",
+    "dart"
+  ]
+}

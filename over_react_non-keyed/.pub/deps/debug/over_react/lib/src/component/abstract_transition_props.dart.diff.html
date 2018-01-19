@@ -1,0 +1,99 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Transformer Diff - over_react/src/component/abstract_transition_props.dart</title>
+          <style>
+            .diff-unmodified {
+                color: #444;
+            }
+            .diff-removal {
+                color: #a00;
+                background-color: #fee;
+                text-decoration: line-through;
+            }
+            .diff-addition {
+                color: #0a0;
+                background-color: #efe;
+            }
+          </style>
+        </head>
+        <body>
+          <code>
+            <pre><span class="diff-unmodified">// Copyright 2017 Workiva Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+library abstract_transition_props;
+
+import 'dart:collection';
+
+import 'package:over_react/over_react.dart';
+
+/// Props that mirror the implementation of [AbstractTransitionProps], made available as a mixin for components
+/// that cannot extend directly from [AbstractTransitionComponent].
+@PropsMixin()
+abstract class TransitionPropsMixin {</span><span class="diff-addition">    /* GENERATED CONSTANTS */ static const ConsumedProps $consumedProps = const ConsumedProps($props, $propKeys); static const PropDescriptor _$prop__transitionCount__TransitionPropsMixin = const PropDescriptor(_$key__transitionCount__TransitionPropsMixin), _$prop__transitionInCount__TransitionPropsMixin = const PropDescriptor(_$key__transitionInCount__TransitionPropsMixin), _$prop__transitionOutCount__TransitionPropsMixin = const PropDescriptor(_$key__transitionOutCount__TransitionPropsMixin), _$prop__onWillHide__TransitionPropsMixin = const PropDescriptor(_$key__onWillHide__TransitionPropsMixin), _$prop__onDidHide__TransitionPropsMixin = const PropDescriptor(_$key__onDidHide__TransitionPropsMixin), _$prop__onWillShow__TransitionPropsMixin = const PropDescriptor(_$key__onWillShow__TransitionPropsMixin), _$prop__onDidShow__TransitionPropsMixin = const PropDescriptor(_$key__onDidShow__TransitionPropsMixin); static const List&lt;PropDescriptor&gt; $props = const [_$prop__transitionCount__TransitionPropsMixin, _$prop__transitionInCount__TransitionPropsMixin, _$prop__transitionOutCount__TransitionPropsMixin, _$prop__onWillHide__TransitionPropsMixin, _$prop__onDidHide__TransitionPropsMixin, _$prop__onWillShow__TransitionPropsMixin, _$prop__onDidShow__TransitionPropsMixin]; static const String _$key__transitionCount__TransitionPropsMixin = 'TransitionPropsMixin.transitionCount', _$key__transitionInCount__TransitionPropsMixin = 'TransitionPropsMixin.transitionInCount', _$key__transitionOutCount__TransitionPropsMixin = 'TransitionPropsMixin.transitionOutCount', _$key__onWillHide__TransitionPropsMixin = 'TransitionPropsMixin.onWillHide', _$key__onDidHide__TransitionPropsMixin = 'TransitionPropsMixin.onDidHide', _$key__onWillShow__TransitionPropsMixin = 'TransitionPropsMixin.onWillShow', _$key__onDidShow__TransitionPropsMixin = 'TransitionPropsMixin.onDidShow'; static const List&lt;String&gt; $propKeys = const [_$key__transitionCount__TransitionPropsMixin, _$key__transitionInCount__TransitionPropsMixin, _$key__transitionOutCount__TransitionPropsMixin, _$key__onWillHide__TransitionPropsMixin, _$key__onDidHide__TransitionPropsMixin, _$key__onWillShow__TransitionPropsMixin, _$key__onDidShow__TransitionPropsMixin]; </span><span class="diff-unmodified">
+  static final TransitionPropsMapView defaultProps = new TransitionPropsMapView({})
+    ..transitionCount = 1;
+
+  Map get props;
+
+  /// The number of `transitionend` event that occur when the transition node is shown/hidden.
+  ///
+  /// Serves as the default for [transitionInCount]/[transitionOutCount] when they are not specified.
+  ///
+  /// Default: `1`
+  </span><span class="diff-removal">int </span><span class="diff-removal">transitionCount</span><span class="diff-addition">int get transitionCount =&gt; props[_$key__transitionCount__TransitionPropsMixin];  set transitionCount(int value) =&gt; props[_$key__transitionCount__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+
+  /// The number of `transitionend` event that occur when the transition node is shown.
+  ///
+  /// Default: [transitionCount]
+  </span><span class="diff-removal">int </span><span class="diff-removal">transitionInCount</span><span class="diff-addition">int get transitionInCount =&gt; props[_$key__transitionInCount__TransitionPropsMixin];  set transitionInCount(int value) =&gt; props[_$key__transitionInCount__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+
+  /// The number of `transitionend` event that occur when the transition node is hidden.
+  ///
+  /// Default: [transitionCount]
+  </span><span class="diff-removal">int </span><span class="diff-removal">transitionOutCount</span><span class="diff-addition">int get transitionOutCount =&gt; props[_$key__transitionOutCount__TransitionPropsMixin];  set transitionOutCount(int value) =&gt; props[_$key__transitionOutCount__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+
+  /// Optional callback that fires before the [AbstractTransitionComponent] is hidden.
+  ///
+  /// Returning `false` will cancel default behavior, and the [AbstractTransitionComponent] will remain visible.
+  </span><span class="diff-removal">Callback </span><span class="diff-removal">onWillHide</span><span class="diff-addition">Callback get onWillHide =&gt; props[_$key__onWillHide__TransitionPropsMixin];  set onWillHide(Callback value) =&gt; props[_$key__onWillHide__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+
+  /// Optional callback that fires after the [AbstractTransitionComponent] is hidden.
+  </span><span class="diff-removal">Callback </span><span class="diff-removal">onDidHide</span><span class="diff-addition">Callback get onDidHide =&gt; props[_$key__onDidHide__TransitionPropsMixin];  set onDidHide(Callback value) =&gt; props[_$key__onDidHide__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+
+  /// Optional callback that fires before the [AbstractTransitionComponent] appears.
+  ///
+  /// Returning `false` will cancel default behavior, and the [AbstractTransitionComponent] will not appear.
+  </span><span class="diff-removal">Callback </span><span class="diff-removal">onWillShow</span><span class="diff-addition">Callback get onWillShow =&gt; props[_$key__onWillShow__TransitionPropsMixin];  set onWillShow(Callback value) =&gt; props[_$key__onWillShow__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+
+  /// Optional callback that fires after the [AbstractTransitionComponent] appears.
+  </span><span class="diff-removal">Callback </span><span class="diff-removal">onDidShow</span><span class="diff-addition">Callback get onDidShow =&gt; props[_$key__onDidShow__TransitionPropsMixin];  set onDidShow(Callback value) =&gt; props[_$key__onDidShow__TransitionPropsMixin] = value;</span><span class="diff-removal">;</span><span class="diff-unmodified">
+}
+
+class TransitionPropsMapView extends MapView with
+    TransitionPropsMixin {
+  /// Create a new instance backed by the specified map.
+  TransitionPropsMapView(Map map) : super(map);
+
+  /// The props to be manipulated via the getters/setters.
+  /// In this case, it's the current MapView object.
+  @override
+  Map get props =&gt; this;
+}
+</span></pre>
+          </code>
+        </body>
+        </html>
+    

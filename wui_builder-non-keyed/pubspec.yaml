@@ -1,0 +1,13 @@
+name: wui_builder_non_keyed
+version: 0.0.0
+author: David Marne <davemarne@gmail.com>
+
+dependencies:
+  wui_builder: 
+    path: ../../wui_builder
+
+transformers:
+  - $dart2js
+
+environment:
+  sdk: ">=1.23.0 <2.0.0"
